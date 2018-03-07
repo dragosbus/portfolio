@@ -1,26 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="description" content="This is a description">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Dragos Busuioc">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <!--Meta tags for social engines-->
-        <meta property="og:title" content="Dragos Busuioc-Web Developer">
-        <meta property="og:image" content="link_to_image">
-        <meta property="og:description" content="description goes here">
-        <title>Dragos Busuioc-Web Developer</title>
-        <script src="https://use.fontawesome.com/608a7161e3.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700,800" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="This is a description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Dragos Busuioc">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Meta tags for social engines-->
+    <meta property="og:title" content="Dragos Busuioc-Web Developer">
+    <meta property="og:image" content="link_to_image">
+    <meta property="og:description" content="description goes here">
+    <title>Dragos Busuioc-Web Developer</title>
+    <script src="https://use.fontawesome.com/608a7161e3.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700,800" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="dist/css/style.css">
+</head>
 
-    <body>
-        <header class="header">
-            <h1>Dragos Busuioc</h1>
-            <nav>
+<body>
+    <header class="header">
+        <div class="header__top">
+            <div class="header__logo-box">
+                <img src="img/logo-white.png" alt="Logo" class="header__logo">
+            </div>
+            <button class="btn btn__hamburger">
+                <svg width="30" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1664 1344v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45z"
+                    />
+                </svg>
+            </button>
+            <nav class="nav">
                 <ul class="navigation">
                     <li>Home</li>
                     <li>About</li>
@@ -28,7 +37,35 @@
                     <li>Contact</li>
                 </ul>
             </nav>
-        </header>
-    </body>
+        </div>
+
+        <div class="header__text-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary--main">Dragos Busuioc</span>
+                <span class="heading-primary--sub">Web Developer</span>
+            </h1>
+        </div>
+    </header>
+    <main>
+        <section id="about">
+            <h3>About Me</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab odit voluptas, voluptatem velit, dolores eius at
+                voluptates reiciendis nesciunt magni obcaecati vel deleniti ipsum ad rerum fugit. Quod, error quas?</p>
+        </section>
+
+        <section id="portfolio">
+            <h3>Work</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab odit voluptas, voluptatem velit, dolores eius at
+                voluptates reiciendis nesciunt magni obcaecati vel deleniti ipsum ad rerum fugit. Quod, error quas?</p>
+        </section>
+
+        <section id="contact">
+            <h3>Contact Me</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab odit voluptas, voluptatem velit, dolores eius at
+                voluptates reiciendis nesciunt magni obcaecati vel deleniti ipsum ad rerum fugit. Quod, error quas?</p>
+        </section>
+    </main>
+    <script src="js/script.js"></script>
+</body>
 
 </html>
