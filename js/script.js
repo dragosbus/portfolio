@@ -22,7 +22,7 @@
         var ul = document.querySelector('.nav');
 
         window.addEventListener('scroll', () => {
-            if (window.pageYOffset >= 520) {
+            if (window.pageYOffset >= 420) {
                 nav.classList.add('top-black');
                 ul.style.backgroundColor = 'rgb(34, 33, 33)';
             } else {
