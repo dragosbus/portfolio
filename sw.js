@@ -1,4 +1,4 @@
-var CACHE_NAME = 'dragos';
+var CACHE_NAME = 'dragos-v1';
 var assets = [
     './',
     'index.html',
@@ -6,7 +6,12 @@ var assets = [
     'js/script.js',
     'dist/img/pole.jpg',
     'dist/img/logo1.png',
-
+    'dist/img/work/dashboard.png',
+    'dist/img/work/meteo.png',
+    'dist/img/work/pig.png',
+    'dist/img/work/quote.png',
+    'dist/img/work/restaurant.png',
+    'dist/img/work/xo.png'
 ];
 
 if (navigator.serviceWorker) {
