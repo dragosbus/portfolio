@@ -13,9 +13,9 @@
                 github: 'https://github.com/dragosbus/webdash'
             },
             {
-                title: "Meteo",
+                title: "Weather",
                 image: "dist/img/work/meteo.jpg",
-                description: "Meteo project",
+                description: "Want to know what the weather is like outside? You just look out the window, or check out this app!",
                 techs: ['HTML', 'CSS', 'JavaScript', 'AJAX'],
                 link: 'https://dragosbus.github.io/freecodecamp/intermediate_projects/weather/',
                 github: 'https://github.com/dragosbus/freecodecamp/tree/master/intermediate_projects/weather'
@@ -23,7 +23,7 @@
             {
                 title: "The Pig Game",
                 image: "dist/img/work/pig.jpg",
-                description: "The Pig Game project",
+                description: "Bring a friend and try your luck.",
                 techs: ['HTML', 'CSS', 'JavaScript'],
                 link: 'https://dragosbus.github.io/pig-game/',
                 github: 'https://github.com/dragosbus/pig-game'
@@ -39,15 +39,15 @@
             {
                 title: "Restaurant Review",
                 image: "dist/img/work/restaurant.jpg",
-                description: "Restaurant Review project",
-                techs: ['HTML', 'CSS', 'JavaScript', 'Fetch API', 'IndexDB'],
+                description: "Restaurant Review project is the result of Mobile Web Specialist NanoDegree from Udacity.",
+                techs: ['HTML', 'CSS', 'JavaScript', 'Fetch API', 'IndexDB','Service Worker'],
                 link: 'https://dragosbus.github.io/restaurant_review/',
                 github: 'https://github.com/dragosbus/restaurant_review'
             },
             {
                 title: "Tic Tac Toe",
                 image: "dist/img/work/xo.jpg",
-                description: "Tic Tac Toe project",
+                description: "Play a game of Tic Tac Toe with the worst AI=).Will become better in the future.",
                 techs: ['HTML', 'CSS', 'JavaScript'],
                 link: 'https://dragosbus.github.io/freecodecamp/advanced_projects/tic-tac-toe/',
                 github: 'https://github.com/dragosbus/freecodecamp/tree/master/advanced_projects/tic-tac-toe'
@@ -63,9 +63,9 @@
             divProject.classList.add('project-page');
 
             //image
-            let image = document.createElement('img');
-            image.src = src;
-            image.setAttribute('alt', `${title} photo`);
+            let image = document.createElement('div');
+            image.classList.add('project-image');
+            image.style.backgroundImage = `linear-gradient(45deg,rgba(158,39,90,0.6),rgba(158,39,90,0.6)),url(${src})`;
             //title
             let titlePage = document.createElement('h4');
             titlePage.textContent = title;
@@ -134,7 +134,7 @@
                     setTimeout(() => {
                         document.querySelector('main').removeChild(divPage);
                         document.body.style.overflow = 'auto';
-                    }, 550);
+                    },550);
                     divPage.classList.add('hide-page');
                 });
             });
