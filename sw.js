@@ -11,7 +11,8 @@ var assets = [
     'dist/img/work/pig.png',
     'dist/img/work/quote.png',
     'dist/img/work/restaurant.png',
-    'dist/img/work/xo.png'
+    'dist/img/work/xo.png',
+    'dist/img/small/meteo.jpg'
 ];
 
 if (navigator.serviceWorker) {
