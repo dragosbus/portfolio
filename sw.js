@@ -1,18 +1,18 @@
 var CACHE_NAME = 'dragos-v1';
 var assets = [
     './',
-    'index.html',
-    'dist/css/style.css',
-    'js/script.js',
-    'dist/img/pole.jpg',
-    'dist/img/logo1.png',
-    'dist/img/work/dashboard.png',
-    'dist/img/work/meteo.png',
-    'dist/img/work/pig.png',
-    'dist/img/work/quote.png',
-    'dist/img/work/restaurant.png',
-    'dist/img/work/xo.png',
-    'dist/img/small/meteo.jpg'
+    './index.html',
+    './dist/css/style.css',
+    './js/script.js',
+    './dist/img/pole.jpg',
+    './dist/img/logo1.png',
+    './dist/img/work/dashboard.png',
+    './dist/img/work/meteo.png',
+    './dist/img/work/pig.png',
+    './dist/img/work/quote.png',
+    './dist/img/work/restaurant.png',
+    './dist/img/work/xo.png',
+    './dist/img/small/meteo.jpg'
 ];
 
 if (navigator.serviceWorker) {
@@ -43,13 +43,16 @@ self.addEventListener('activate', e => {
 
 self.addEventListener('fetch', e => {
     e.respondWith(
-        fetch(e.request).then(response => {
-            return caches.open(CACHE_NAME).then(cache => {
-                cache.put(e.request.url, response.clone());
-                return response;
-            })
-        }).catch(err => {
-            return caches.match(e.request);
+        caches.match(e.request).then(res => {
+            if (res) return res;
+            else {
+                return fetch(e.request).then(response => {
+                    return caches.open(CACHE_NAME).then(cache => {
+                        cache.put(e.request.url, response.clone());
+                        return response;
+                    }).catch(err => caches.match(e.request));
+                });
+            }
         })
     );
 });
