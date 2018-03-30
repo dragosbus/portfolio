@@ -65,7 +65,7 @@
             //image
             let image = document.createElement('div');
             image.classList.add('project-image');
-            image.style.backgroundImage = `linear-gradient(45deg,rgba(158,39,90,0.6),rgba(158,39,90,0.6)),url(${src})`;
+            image.style.backgroundImage = `url(${src})`;
             //title
             let titlePage = document.createElement('h4');
             titlePage.textContent = title;
