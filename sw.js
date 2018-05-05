@@ -12,7 +12,8 @@ var assets = [
     './dist/img/work/quote.png',
     './dist/img/work/restaurant.png',
     './dist/img/work/xo.png',
-    './dist/img/small/meteo.jpg'
+    './dist/img/small/meteo.jpg',
+    './dist/img/arrow-down.png'
 ];
 
 if (navigator.serviceWorker) {
