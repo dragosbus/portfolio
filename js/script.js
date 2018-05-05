@@ -56,9 +56,6 @@
 
         function createDiv(title, src, content, techs, github, liveUrl) {
 
-            let overlay = document.createElement('div');
-            overlay.classList.add('overlay');
-
             let divProject = document.createElement('div');
             divProject.classList.add('project-page');
 
@@ -111,12 +108,9 @@
             divProject.appendChild(description);
             divProject.appendChild(techUl);
             divProject.appendChild(closeBtn);
-            divProject.appendChild(divLinks);
-            
+            divProject.appendChild(divLinks);     
 
-            overlay.appendChild(divProject);
-
-            return overlay;
+            return divProject;
         }
 
         for (let i = 0; i < btnsProjects.length; i++) {
@@ -136,7 +130,7 @@
                     setTimeout(() => {
                         document.querySelector('main').removeChild(divPage);
                         document.body.style.overflow = 'auto';
-                    },550);
+                    },500);
                     document.querySelector('.project-page').classList.add('hide-page');
                 });
             });
