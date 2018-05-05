@@ -81,8 +81,10 @@
             });
             //close page
             let closeBtn = document.createElement('button');
+            let imgArrowDown = document.createElement('img');
+            imgArrowDown.src = '/img/arrow-down.png';
             closeBtn.classList.add('btn');
-            closeBtn.textContent = 'X';
+            closeBtn.appendChild(imgArrowDown);
             //links
             let divLinks = document.createElement('div');
             divLinks.classList.add('links');
@@ -135,7 +137,7 @@
                         document.querySelector('main').removeChild(divPage);
                         document.body.style.overflow = 'auto';
                     },550);
-                    divPage.classList.add('hide-page');
+                    document.querySelector('.project-page').classList.add('hide-page');
                 });
             });
         }
