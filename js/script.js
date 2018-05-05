@@ -79,7 +79,7 @@
             //close page
             let closeBtn = document.createElement('button');
             let imgArrowDown = document.createElement('img');
-            imgArrowDown.src = '/img/arrow-down.png';
+            imgArrowDown.src = 'dist/img/arrow-down.png';
             closeBtn.classList.add('btn');
             closeBtn.appendChild(imgArrowDown);
             //links
