@@ -1,4 +1,4 @@
-var CACHE_NAME = 'dragos-v1';
+var CACHE_NAME = 'dragos-v2';
 var assets = [
     './',
     './index.html',
