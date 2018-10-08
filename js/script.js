@@ -178,4 +178,21 @@
 
     }(window));
 
+    const lazyLoadWork = (function() {
+        const portfolio = document.getElementById('portfolio');
+        let workOffset = portfolio.offsetTop;
+        console.log(workOffset);
+        
+        window.addEventListener('scroll', e=>{
+            let windowOffset = window.pageYOffset;
+            if(windowOffset >= workOffset + 200) {
+                [...document.querySelectorAll('.project')].forEach(card=>{
+                    setTimeout(()=>{
+                        card.style.display = 'flex';
+                    },700);
+                });
+            }
+        });
+    }());
+
 }());
