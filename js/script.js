@@ -40,7 +40,7 @@
                 title: "Restaurant Review",
                 image: "dist/img/work/restaurant.jpg",
                 description: "Restaurant Review project is the result of Mobile Web Specialist NanoDegree from Udacity.",
-                techs: ['HTML', 'CSS', 'JavaScript', 'Fetch API', 'IndexDB','Service Worker'],
+                techs: ['HTML', 'CSS', 'JavaScript', 'Fetch API', 'IndexDB', 'Service Worker'],
                 link: 'https://dragosbus.github.io/restaurant_review/',
                 github: 'https://github.com/dragosbus/restaurant_review'
             },
@@ -102,13 +102,13 @@
 
             divLinks.appendChild(git);
             divLinks.appendChild(live);
-            
+
             divProject.appendChild(image);
             divProject.appendChild(titlePage);
             divProject.appendChild(description);
             divProject.appendChild(techUl);
             divProject.appendChild(closeBtn);
-            divProject.appendChild(divLinks);     
+            divProject.appendChild(divLinks);
 
             return divProject;
         }
@@ -116,7 +116,7 @@
         for (let i = 0; i < btnsProjects.length; i++) {
             btnsProjects[i].addEventListener('click', e => {
                 let data = dataProject[i];
-                let divPage = createDiv(data.title, data.image, data.description, data.techs,data.github,data.link);
+                let divPage = createDiv(data.title, data.image, data.description, data.techs, data.github, data.link);
                 //remove class 'hide-page' if exist
                 if (divPage.classList.contains('hide-page')) {
                     divPage.classList.remove('hide-page');
@@ -130,7 +130,7 @@
                     setTimeout(() => {
                         document.querySelector('main').removeChild(divPage);
                         document.body.style.overflow = 'auto';
-                    },500);
+                    }, 500);
                     document.querySelector('.project-page').classList.add('hide-page');
                 });
             });
@@ -178,20 +178,24 @@
 
     }(window));
 
-    const lazyLoadWork = (function() {
+    const lazyLoadWork = (function () {
         const portfolio = document.getElementById('portfolio');
+        const contact = document.getElementById('contact');
         let workOffset = portfolio.offsetTop;
-        console.log(workOffset);
-        
-        window.addEventListener('scroll', e=>{
+        let contactOffset = workOffset + portfolio.offsetHeight;
+
+        window.addEventListener('scroll', e => {
             let windowOffset = window.pageYOffset;
-            if(windowOffset >= workOffset + 200) {
-                [...document.querySelectorAll('.project')].forEach(card=>{
-                    setTimeout(()=>{
-                        card.style.display = 'flex';
-                    },700);
+            if (windowOffset >= workOffset + 200) {
+                [...document.querySelectorAll('.project')].forEach(card => {
+                    card.style.display = 'flex';
                 });
+                contactOffset = workOffset + portfolio.offsetHeight
+                if (windowOffset >= contactOffset + 200) {
+                    contact.style.display = 'flex';
+                }
             }
+
         });
     }());
 
