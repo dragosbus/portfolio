@@ -162,10 +162,10 @@
         window.addEventListener('scroll', () => {
             if (window.pageYOffset >= 420) {
                 headerTop.classList.add('top-black');
-                ul.style.backgroundColor = 'rgb(26, 32, 47)';
+                ul.style.marginTop = '-20px';
             } else {
                 headerTop.classList.remove('top-black');
-                ul.style.backgroundColor = 'transparent';
+                ul.style.marginTop = '0';
             }
         });
 
