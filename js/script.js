@@ -69,6 +69,7 @@ const projects = (() => {
   const project = document.querySelector('.project-details');
   const hideOverlayBtn = document.querySelector('.btn-hide--overlay');
 
+  //return details project clicked component
   const getProject = project => {
     return `
       <div>
@@ -78,12 +79,14 @@ const projects = (() => {
     `;
   };
 
+  //get the index of the project cliked
   const getIndexProjectClicked = (target) => {
     const projects = document.querySelectorAll('.list-projects a');
 
     return [...projects].indexOf(target.parentNode);
   };
 
+  //hide the overlay
   hideOverlayBtn.addEventListener('click', () => {
     overlay.style.display = 'none';
   });
