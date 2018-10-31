@@ -12,3 +12,20 @@ document.querySelector('.btn-hamburger').addEventListener('click', e=>{
     document.querySelector('.intro').style.transform = 'translate3d(-100px, 0, 0)';
   }
 });
+
+const projects = (()=>{
+  const listProjects = document.querySelector('.list-projects');
+  const overlay = document.querySelector('.overlay');
+  const hideOverlayBtn = document.querySelector('.btn-hide--overlay');
+
+  hideOverlayBtn.addEventListener('click', ()=>{
+    overlay.style.display = 'none';
+  });
+
+  listProjects.addEventListener('click', e=>{
+    e.preventDefault();
+    if(e.target.tagName === 'IMG') {
+      overlay.style.display = 'block';     
+    }
+  });
+})();
