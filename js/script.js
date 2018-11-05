@@ -81,7 +81,7 @@ const projects = (() => {
 
   //get the index of the project cliked
   const getIndexProjectClicked = (target) => {
-    const projects = document.querySelectorAll('.list-projects a');
+        const projects = document.querySelectorAll('.list-projects a');
 
     return [...projects].indexOf(target.parentNode);
   };
