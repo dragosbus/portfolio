@@ -90,6 +90,7 @@ const projects = (() => {
     return [...projects].indexOf(target.parentNode);
   };
 
+  //change the index of the current project logic
   const changeProject = (currentProjectIndex, btn) => {
     if (btn === 'next') {
       return currentProjectIndex < lengthAllProjects - 1 ? currentProjectIndex + 1 : 0;
@@ -101,7 +102,7 @@ const projects = (() => {
   arrowsDiv.addEventListener('click', e => {
     let btn = e.target.value || e.target.alt.slice(0, 4);
     currentProject = changeProject(currentProject, btn);
-    console.log(currentProject);
+    
     project.innerHTML = getProject(dataProject[currentProject]);
   });
 
